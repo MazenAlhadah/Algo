@@ -13,12 +13,12 @@ import java.util.Arrays;
 public class Sec_Sol {
     
     // With Solting
-    public static int WithSorting(int[] A) {
+    public static long WithSorting(int[] A) {
         Arrays.sort(A);
         int n = A.length;
 
-        int option1 = A[n - 1] * A[n - 2] * A[n - 3];
-        int option2 = A[0] * A[1] * A[n - 1];
+        long option1 = A[n - 1] * A[n - 2] * A[n - 3];
+        long option2 = A[0] * A[1] * A[n - 1];
 
         return Math.max(option1, option2);
     }

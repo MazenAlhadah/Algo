@@ -9,8 +9,8 @@ package algo_project;
  * @author MazenAlhadah
  */
 public class Third_sol {
-    //With Tring
-    public static int WithTring(int[] A) {
+    //With Catshing
+    public static long WithTring(int[] A) {
         int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE, max3 = Integer.MIN_VALUE;
         int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
         for (int num : A) {
@@ -31,8 +31,8 @@ public class Third_sol {
                 min2 = num;
             }
         }
-        int option1 = max1 * max2 * max3;
-        int option2 = max1 * min1 * min2;
+        long option1 = max1 * max2 * max3;
+        long option2 = max1 * min1 * min2;
         return Math.max(option1, option2);
     }
 }

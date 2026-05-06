@@ -1,6 +1,5 @@
 package algo_project;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -28,9 +27,35 @@ public class Algo_project {
             A[i] = sc.nextInt();
         }
 
+        long startTime1 = System.nanoTime();
         System.out.println("WithForLoops Result: " + First_Sol.WithForLoops(A));
+        long endTime1 = System.nanoTime();
+        long executionTime1 = endTime1 - startTime1;
+        System.out.println("Execution Time = " + executionTime1 + " ns");
+        System.out.println("-------------------------------------");
+
+        long startTime2 = System.nanoTime();
         System.out.println("Sorting Result: " + Sec_Sol.WithSorting(A));
-        System.out.println("WithTring Result: " + Third_sol.WithTring(A));
+        long endTime2 = System.nanoTime();
+        long executionTime2 = endTime2 - startTime2;
+        System.out.println("Execution Time = " + executionTime2 + " ns");
+        System.out.println("-------------------------------------");
+        
+        long startTime3 = System.nanoTime();
+        System.out.println("Wuth Catshing Result: " + Third_sol.WithTring(A));
+        long endTime3 = System.nanoTime();
+        long executionTime3 = endTime3 - startTime3;
+        System.out.println("Execution Time = " + executionTime3 + " ns");
+        System.out.println("-------------------------------------");
+        
+        
+        long startTime4 = System.nanoTime();
+        System.out.println("With Recursion: " + recursiveAlgo.maxProductOfThree_recursion(A,n));
+        long endTime4 = System.nanoTime();
+        long executionTime4 = endTime4 - startTime4;
+        System.out.println("Execution Time = " + executionTime4 + " ns");
+        System.out.println("-------------------------------------");
+        
     }
 }
     
