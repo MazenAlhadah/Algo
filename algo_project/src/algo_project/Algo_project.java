@@ -50,7 +50,7 @@ public class Algo_project {
         
         
         long startTime4 = System.nanoTime();
-        System.out.println("With Recursion2: " + recursiveAlgo.maxProduct(A));
+        System.out.println("With Recursion: " + recursiveAlgo.maxProduct(A));
         long endTime4 = System.nanoTime();
         long executionTime4 = endTime4 - startTime4;
         System.out.println("Execution Time = " + executionTime4 + " ns");
