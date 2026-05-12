@@ -9,26 +9,24 @@ package algo_project;
  * @author MazenAlhadah
  */
 public class recursiveAlgo {
-    public static long choose(int[] A, int n, int start, int count, long product) {
+    static long ans = Long.MIN_VALUE;
 
-        if (count == 3)
-            return product;
+    static void solve(int[] nums, int start, int count, long product) {
 
-        int remaining = 3 - count;
+        if (count == 3) {
+            ans = Math.max(ans, product);
+            return;
+        }
 
-        if (n - start < remaining)
-            return Long.MIN_VALUE;
-
-        long inc = choose(A, n, start + 1, count + 1,
-                product * A[start]);
-
-        long exc = choose(A, n, start + 1, count, product);
-
-        return Math.max(inc, exc);
+        for (int i = start; i < nums.length; i++) {
+            solve(nums, i + 1, count + 1, product * nums[i]);
+        }
     }
 
-    public static long maxProductOfThree_recursion(int[] A, int n) {
-        return choose(A, n, 0, 0, 1);
-    }
+    static long maxProduct(int[] nums) {
 
+        solve(nums, 0, 0, 1);
+
+        return ans;
+    }
 }

@@ -28,7 +28,7 @@ public class Algo_project {
         }
 
         long startTime1 = System.nanoTime();
-        System.out.println("WithForLoops Result: " + First_Sol.WithForLoops(A));
+        System.out.println("With Loops Result: " + First_Sol.WithForLoops(A));
         long endTime1 = System.nanoTime();
         long executionTime1 = endTime1 - startTime1;
         System.out.println("Execution Time = " + executionTime1 + " ns");
@@ -42,7 +42,7 @@ public class Algo_project {
         System.out.println("-------------------------------------");
         
         long startTime3 = System.nanoTime();
-        System.out.println("Wuth Catshing Result: " + Third_sol.WithTring(A));
+        System.out.println("Linear Tracking Result: " + Third_sol.WithTring(A));
         long endTime3 = System.nanoTime();
         long executionTime3 = endTime3 - startTime3;
         System.out.println("Execution Time = " + executionTime3 + " ns");
@@ -50,7 +50,7 @@ public class Algo_project {
         
         
         long startTime4 = System.nanoTime();
-        System.out.println("With Recursion: " + recursiveAlgo.maxProductOfThree_recursion(A,n));
+        System.out.println("With Recursion2: " + recursiveAlgo.maxProduct(A));
         long endTime4 = System.nanoTime();
         long executionTime4 = endTime4 - startTime4;
         System.out.println("Execution Time = " + executionTime4 + " ns");
