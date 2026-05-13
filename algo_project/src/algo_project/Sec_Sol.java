@@ -1,3 +1,6 @@
+package algo_project;
+
+
 public class Sec_Sol {
 
     public static void mergeSort(int[] A, int left, int right) {
